@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Electric Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a202c; /* Dark background */
+            color: #f7fafc; /* Light text for contrast */
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #667eea, #764ba2); /* Electric purple gradient */
+            padding: 10rem 0;
+            text-align: center;
+        }
+        .profile-image-container {
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            margin: 0 auto 2rem;
+            width: 150px;
+            height: 150px;
+        }
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .animated-text {
+            font-family: 'Arial Black', sans-serif; /* Bold, attention-grabbing font */
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            overflow: hidden; /* Hide overflowing letters */
+            white-space: nowrap; /* Prevent wrapping */
+        }
+        .letter {
+            display: inline-block;
+            animation: colorChange 1s infinite alternate; /* Simple color animation */
+        }
+        @keyframes colorChange {
+            0% { color: #f97316; }   /* Orange */
+            25% { color: #4ade80; }  /* Green */
+            50% { color: #3b82f6; }  /* Blue */
+            75% { color: #d946ef; }  /* Purple */
+            100% { color: #facc15; } /* Yellow */
+        }
+        .tagline {
+            color: #cbd5e0;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            background-color: #eab308; /* Vibrant yellow */
+            color: #1a202c; /* Dark text on yellow */
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .cta-button:hover {
+            background-color: #facc15; /* Lighter yellow on hover */
+            transform: scale(1.05);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .section-title {
+            font-family: 'Georgia', serif;
+            font-size: 2.5rem;
+            color: #f97316; /* Striking orange */
+            text-align: center;
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px #000; /* Subtle shadow for depth */
+        }
+        .project-card {
+            background-color: #2d3748; /* Darker card background */
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-title {
+            color: #f0fdf4; /* Light text on dark background */
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .project-description {
+            color: #cbd5e0;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .project-link {
+            color: #63b3ed; /* Light blue link */
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        .project-link:hover {
+            color: #90cdf4;
+        }
+        #contact-form label {
+            display: block;
+            color: #e2e8f0;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #4a5568;
+            border-radius: 0.25rem;
+            background-color: #2d3748;
+            color: #f7fafc;
+            box-sizing: border-box;
+            outline: none;
+        }
+        #contact-form textarea {
+            resize: vertical;
+        }
+        #contact-form button[type="submit"] {
+            background-color: #8b5cf6; /* Purple submit button */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+        #contact-form button[type="submit"]:hover {
+            background-color: #a78bfa;
+            transform: scale(1.02);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #2d3748;
+            color: #cbd5e0;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <section class="hero-section">
+        <div class="container mx-auto px-4">
+            <div class="profile-image-container">
+                <img src="placeholder-profile.jpg" alt="Your Electric Profile" class="profile-image">
+            </div>
+            <h1 class="animated-text">
+                <span>H</span>
+                <span>i</span>
+                <span>,</span>
+                <span>&nbsp;</span>
+                <span>I</span>
+                <span>'</span>
+                <span>m</span>
+                <span>&nbsp;</span>
+                <span>N</span>
+                <span>u</span>
+                <span>r</span>
+                <span>&nbsp;</span>
+                <span>A</span>
+                <span>l</span>
+                <span>a</span>
+                <span>m</span>
+            </h1>
+            <p class="tagline">Crafting <span class="text-yellow-400">electrifying</span> digital experiences.</p>
+            <a href="https://www.google.com" class="cta-button">Connect with Me</a>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">About My Spark</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Driven by a passion for innovation and a keen eye for detail, I thrive on creating solutions that not only function flawlessly but also captivate and engage. My journey in [mention your field] has been an exciting exploration of [mention key areas of interest].
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                I believe in the power of collaboration and am always eager to connect with fellow enthusiasts and potential partners. My approach is [mention your unique approach], and I'm constantly seeking new challenges to ignite my creativity.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Projects That Shine</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card">
+                    <img src="placeholder-project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="project-title">[Project 1 Title]</h3>
+                        <p class="project-description">[Short, engaging description of Project 1]</p>
+                        <a href="#" class="project-link">Explore Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="placeholder-project2.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="project-title">[Project 2 Title]</h3>
+                        <p class="project-description">[Short, engaging description of Project 2]</p>
+                        <a href="#" class="project-link">Dive In</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="placeholder-project3.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="project-title">[Project 3 Title]</h3>
+                        <p class="project-description">[Short, engaging description of Project 3]</p>
+                        <a href="#" class="project-link">See Details</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="placeholder-project4.jpg" alt="Project 4" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="project-title">[Project 4 Title]</h3>
+                        <p class="project-description">[Short, engaging description of Project 4]</p>
+                        <a href="#" class="project-link">See Details</a>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-800" id="contact">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Let's Electrify Your Ideas!</h2>
+            <p class="text-gray-300 text-center mb-8">
+                Ready to spark something amazing? Drop me a line and let's discuss how we can bring your vision to life.
+            </p>
+            <div class="max-w-md mx-auto" id="contact-form">
+                <form class="space-y-4">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Your Email">
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit">Send Spark</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <footer class="py-6">
+        <p>&copy; Nur Alam. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to apply the letter animation
+        const animatedText = document.querySelector('.animated-text');
+        if (animatedText) {
+            const text = animatedText.textContent;
+            animatedText.innerHTML = ''; // Clear the original text
+            text.split('').forEach(letter => {
+                const span = document.createElement('span');
+                span.className = 'letter';
+                span.textContent = letter;
+                animatedText.appendChild(span);
+            });
+        }
+    </script>
+
+</body>
+</html>
